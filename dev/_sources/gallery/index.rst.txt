@@ -67,6 +67,48 @@ Lines
    :hidden:
 
    /gallery/line/linestyles
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Many modules in PyGMT allow plotting vectors with individual heads and tails. For this purpose,...">
+
+.. only:: html
+
+ .. figure:: /gallery/line/images/thumb/sphx_glr_vector-heads-tails_thumb.png
+     :alt: Vector heads and tails
+
+     :ref:`sphx_glr_gallery_line_vector-heads-tails.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/line/vector-heads-tails
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.plot method can plot Cartesian, circular, and geographic vectors. The style pa...">
+
+.. only:: html
+
+ .. figure:: /gallery/line/images/thumb/sphx_glr_vectors_thumb.png
+     :alt: Cartesian, circular, and geographic vectors
+
+     :ref:`sphx_glr_gallery_line_vectors.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/line/vectors
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
@@ -82,7 +124,7 @@ Coastlines and boundaries
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The borders argument of pygmt.Figure.coast specifies levels of political boundaries to plot and...">
+    <div class="sphx-glr-thumbcontainer" tooltip="The borders parameter of pygmt.Figure.coast specifies levels of political boundaries to plot an...">
 
 .. only:: html
 
@@ -103,7 +145,7 @@ Coastlines and boundaries
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The land and water arguments of pygmt.Figure.coast specify a color to fill in the land and wate...">
+    <div class="sphx-glr-thumbcontainer" tooltip="The land and water parameters of pygmt.Figure.coast specify a color to fill in the land and wat...">
 
 .. only:: html
 
@@ -325,7 +367,7 @@ Plotting map items
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Points can be plotted with different transparency levels by passing in an array to the transpar...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Points can be plotted with different transparency levels by passing in an array argument to the...">
 
 .. only:: html
 
@@ -346,7 +388,7 @@ Plotting map items
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.plot method can plot points. We must specify the plot symbol and size through ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.plot method can plot points. The plot symbol and size is set with the style pa...">
 
 .. only:: html
 

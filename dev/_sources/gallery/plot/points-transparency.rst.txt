@@ -21,8 +21,8 @@
 Points with varying transparency
 --------------------------------
 
-Points can be plotted with different transparency levels by passing in an array to the
-``transparency`` argument of :meth:`pygmt.Figure.plot`.
+Points can be plotted with different transparency levels by passing in an array
+argument to the ``transparency`` parameter of :meth:`pygmt.Figure.plot`.
 
 .. GENERATED FROM PYTHON SOURCE LINES 8-26
 
@@ -72,7 +72,7 @@ Points can be plotted with different transparency levels by passing in an array 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.146 seconds)
+   **Total running time of the script:** ( 0 minutes  1.365 seconds)
 
 
 .. _sphx_glr_download_gallery_plot_points-transparency.py:

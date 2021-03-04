@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -240,7 +239,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -251,31 +249,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="sphx-glr-download-link-note admonition note">
+  <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-gallery-plot-image-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
@@ -285,9 +259,9 @@ to download the full example code</p>
 <p>The <a class="reference internal" href="../../api/generated/pygmt.Figure.image.html#pygmt.Figure.image" title="pygmt.Figure.image"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.Figure.image</span></code></a> method can be used to read and
 place a raster image file or an Encapsulated PostScript file
 on a map. We must specify the file as <em>str</em> via the <code class="docutils literal notranslate"><span class="pre">imagefile</span></code>
-argument or simply use the filename as the first argument. You can
+parameter or simply use the filename as the first argument. You can
 also use a full URL pointing to your desired image. The <code class="docutils literal notranslate"><span class="pre">position</span></code>
-argument allows us to set a reference point on the map for the image.</p>
+parameter allows us to set a reference point on the map for the image.</p>
 <img alt="image" class="sphx-glr-single-img" src="../../_images/sphx_glr_image_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>image [NOTICE]:   -&gt; Download URL file: https://www.generic-mapping-tools.org/_static/gmt-logo.png
@@ -314,13 +288,13 @@ argument allows us to set a reference point on the map for the image.</p>
     <span class="n">box</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="c1"># clean up the image downloaded in the current directory</span>
+<span class="c1"># clean up the downloaded image in the current directory</span>
 <a href="https://docs.python.org/3/library/os.html#os.remove" title="os.remove" class="sphx-glr-backref-module-os sphx-glr-backref-type-py-function"><span class="n">os</span><span class="o">.</span><span class="n">remove</span></a><span class="p">(</span><span class="s2">&quot;gmt-logo.png&quot;</span><span class="p">)</span>
 
 <a href="../../api/generated/pygmt.Figure.show.html#pygmt.Figure.show" title="pygmt.Figure.show" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.126 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.315 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-plot-image-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/4c77d80db78b79ac1d8f40e3ab8d8ec1/image.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">image.py</span></code></a></p>
@@ -356,7 +330,7 @@ argument allows us to set a reference point on the map for the image.</p>
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/aeb4d4a">aeb4d4a</a></code>.
         </span>
       
 

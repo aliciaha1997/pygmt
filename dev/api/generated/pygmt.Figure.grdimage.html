@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -256,7 +255,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -267,31 +265,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="pygmt-figure-grdimage">
+  <div class="section" id="pygmt-figure-grdimage">
 <h1>pygmt.Figure.grdimage<a class="headerlink" href="#pygmt-figure-grdimage" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt id="pygmt.Figure.grdimage">
@@ -340,6 +314,7 @@ smaller than that implied by the extent of the grid.</p>
 <li><p>X = xshift</p></li>
 <li><p>Y = yshift</p></li>
 <li><p>c = panel</p></li>
+<li><p>f = coltypes</p></li>
 <li><p>n = interpolation</p></li>
 <li><p>p = perspective</p></li>
 <li><p>t = transparency</p></li>
@@ -348,7 +323,7 @@ smaller than that implied by the extent of the grid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>grid</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.16.3.dev0)"><em>xarray.DataArray</em></a>) – The file name or a DataArray containing the input 2-D gridded data
+<li><p><strong>grid</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.17.1.dev0)"><em>xarray.DataArray</em></a>) – The file name or a DataArray containing the input 2-D gridded data
 set or image to be plotted (See GRID FILE FORMATS at
 <a class="reference external" href="https://docs.generic-mapping-tools.org/latest/grdimage.html#grid-file-formats">https://docs.generic-mapping-tools.org/latest/grdimage.html#grid-file-formats</a>).</p></li>
 <li><p><strong>img_out</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – <em>out_img</em>[=<em>driver</em>].
@@ -443,6 +418,10 @@ selected order. Instead of <em>row,col</em> you may also give a scalar
 value <em>index</em> which depends on the order you set via <code class="docutils literal notranslate"><span class="pre">autolabel</span></code>
 when the subplot was defined. <strong>Note</strong>: <em>row</em>, <em>col</em>, and <em>index</em>
 all start at 0.</p></li>
+<li><p><strong>coltypes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – [<strong>i</strong>|<strong>o</strong>]<em>colinfo</em>.
+Specify data types of input and/or output columns (time or
+geographical data). Full documentation is at
+<a class="reference external" href="https://docs.generic-mapping-tools.org/latest/gmt.html#f-full">https://docs.generic-mapping-tools.org/latest/gmt.html#f-full</a>.</p></li>
 <li><p><strong>interpolation</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – <p>[<strong>b</strong>|<strong>c</strong>|<strong>l</strong>|<strong>n</strong>][<strong>+a</strong>][<strong>+b</strong><em>BC</em>][<strong>+c</strong>][<strong>+t</strong><em>threshold</em>].
 Select interpolation mode for grids. You can select the type of
 spline used:</p>
@@ -515,7 +494,7 @@ negative number <em>-n</em> to select (all - <em>n</em>) cores (or at least 1 if
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/aeb4d4a">aeb4d4a</a></code>.
         </span>
       
 

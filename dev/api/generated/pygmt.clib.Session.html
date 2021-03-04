@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -146,6 +145,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#gmt-c-api">GMT C API</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">pygmt.clib.Session</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.clib.Session.call_module.html">pygmt.clib.Session.call_module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_data.html">pygmt.clib.Session.virtualfile_from_data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_matrix.html">pygmt.clib.Session.virtualfile_from_matrix</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_vectors.html">pygmt.clib.Session.virtualfile_from_vectors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_grid.html">pygmt.clib.Session.virtualfile_from_grid</a></li>
@@ -247,7 +247,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -258,31 +257,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="pygmt-clib-session">
+  <div class="section" id="pygmt-clib-session">
 <h1>pygmt.clib.Session<a class="headerlink" href="#pygmt-clib-session" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="pygmt.clib.Session">
@@ -377,16 +352,19 @@ open session.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="pygmt.clib.Session.put_vector.html#pygmt.clib.Session.put_vector" title="pygmt.clib.Session.put_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session.put_vector</span></code></a>(dataset, column, vector)</p></td>
 <td><p>Attach a numpy 1D array as a column on a GMT dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_grid.html#pygmt.clib.Session.virtualfile_from_grid" title="pygmt.clib.Session.virtualfile_from_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session.virtualfile_from_grid</span></code></a>(grid)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_data.html#pygmt.clib.Session.virtualfile_from_data" title="pygmt.clib.Session.virtualfile_from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session.virtualfile_from_data</span></code></a>([check_kind, …])</p></td>
+<td><p>Store any data inside a virtual file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_grid.html#pygmt.clib.Session.virtualfile_from_grid" title="pygmt.clib.Session.virtualfile_from_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session.virtualfile_from_grid</span></code></a>(grid)</p></td>
 <td><p>Store a grid in a virtual file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_matrix.html#pygmt.clib.Session.virtualfile_from_matrix" title="pygmt.clib.Session.virtualfile_from_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session.virtualfile_from_matrix</span></code></a>(matrix)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_matrix.html#pygmt.clib.Session.virtualfile_from_matrix" title="pygmt.clib.Session.virtualfile_from_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session.virtualfile_from_matrix</span></code></a>(matrix)</p></td>
 <td><p>Store a 2d array as a table inside a virtual file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_vectors.html#pygmt.clib.Session.virtualfile_from_vectors" title="pygmt.clib.Session.virtualfile_from_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session.virtualfile_from_vectors</span></code></a>(*vectors)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_vectors.html#pygmt.clib.Session.virtualfile_from_vectors" title="pygmt.clib.Session.virtualfile_from_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session.virtualfile_from_vectors</span></code></a>(*vectors)</p></td>
 <td><p>Store 1d arrays as columns of a table inside a virtual file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pygmt.clib.Session.write_data.html#pygmt.clib.Session.write_data" title="pygmt.clib.Session.write_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session.write_data</span></code></a>(family, geometry, mode, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="pygmt.clib.Session.write_data.html#pygmt.clib.Session.write_data" title="pygmt.clib.Session.write_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Session.write_data</span></code></a>(family, geometry, mode, …)</p></td>
 <td><p>Write a GMT data container to a file.</p></td>
 </tr>
 </tbody>
@@ -417,7 +395,7 @@ open session.</p>
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/aeb4d4a">aeb4d4a</a></code>.
         </span>
       
 

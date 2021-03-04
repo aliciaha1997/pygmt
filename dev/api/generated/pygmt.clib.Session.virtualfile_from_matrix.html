@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -49,7 +48,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="pygmt.clib.Session.virtualfile_from_vectors" href="pygmt.clib.Session.virtualfile_from_vectors.html" />
-    <link rel="prev" title="pygmt.clib.Session.call_module" href="pygmt.clib.Session.call_module.html" />
+    <link rel="prev" title="pygmt.clib.Session.virtualfile_from_data" href="pygmt.clib.Session.virtualfile_from_data.html" />
     <!-- Google Analytics tracking code -->
     <!-- See https://developers.google.com/analytics/devguides/collection/analyticsjs/ for documentation. -->
     <!-- 'storage': 'none' disables cookies -->
@@ -146,6 +145,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#gmt-c-api">GMT C API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="pygmt.clib.Session.html">pygmt.clib.Session</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.clib.Session.call_module.html">pygmt.clib.Session.call_module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_data.html">pygmt.clib.Session.virtualfile_from_data</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">pygmt.clib.Session.virtualfile_from_matrix</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_vectors.html">pygmt.clib.Session.virtualfile_from_vectors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.clib.Session.virtualfile_from_grid.html">pygmt.clib.Session.virtualfile_from_grid</a></li>
@@ -247,7 +247,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -258,31 +257,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="pygmt-clib-session-virtualfile-from-matrix">
+  <div class="section" id="pygmt-clib-session-virtualfile-from-matrix">
 <h1>pygmt.clib.Session.virtualfile_from_matrix<a class="headerlink" href="#pygmt-clib-session-virtualfile-from-matrix" title="Permalink to this headline">¶</a></h1>
 <dl class="py method">
 <dt id="pygmt.clib.Session.virtualfile_from_matrix">
@@ -297,11 +272,11 @@ virtual file upon exit of the <code class="docutils literal notranslate"><span c
 to be a <code class="docutils literal notranslate"><span class="pre">GMT_DATASET</span></code>.</p>
 <p><strong>Not meant for creating ``GMT_GRID``</strong>. The grid requires more
 metadata than just the data matrix. Use
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">virtualfile_from_grid</span></code> instead.</p>
+<a class="reference internal" href="pygmt.clib.Session.virtualfile_from_grid.html#pygmt.clib.Session.virtualfile_from_grid" title="pygmt.clib.Session.virtualfile_from_grid"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.virtualfile_from_grid</span></code></a> instead.</p>
 <p>Use this instead of creating the data container and virtual file by
-hand with <code class="xref py py-meth docutils literal notranslate"><span class="pre">create_data</span></code>,
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">put_matrix</span></code>, and
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">open_virtual_file</span></code></p>
+hand with <a class="reference internal" href="pygmt.clib.Session.create_data.html#pygmt.clib.Session.create_data" title="pygmt.clib.Session.create_data"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.create_data</span></code></a>,
+<a class="reference internal" href="pygmt.clib.Session.put_matrix.html#pygmt.clib.Session.put_matrix" title="pygmt.clib.Session.put_matrix"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.put_matrix</span></code></a>, and
+<a class="reference internal" href="pygmt.clib.Session.open_virtual_file.html#pygmt.clib.Session.open_virtual_file" title="pygmt.clib.Session.open_virtual_file"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.open_virtual_file</span></code></a></p>
 <p>The matrix must be C contiguous in memory. If it is not (e.g., it is a
 slice of a larger array), the array will be copied to make sure it is.</p>
 <dl class="field-list simple">
@@ -350,7 +325,7 @@ GMT module.</p>
         <a href="pygmt.clib.Session.virtualfile_from_vectors.html" class="btn btn-neutral float-right" title="pygmt.clib.Session.virtualfile_from_vectors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pygmt.clib.Session.call_module.html" class="btn btn-neutral float-left" title="pygmt.clib.Session.call_module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pygmt.clib.Session.virtualfile_from_data.html" class="btn btn-neutral float-left" title="pygmt.clib.Session.virtualfile_from_data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -362,7 +337,7 @@ GMT module.</p>
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/aeb4d4a">aeb4d4a</a></code>.
         </span>
       
 

@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -235,7 +234,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -246,31 +244,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="pygmt-info">
+  <div class="section" id="pygmt-info">
 <h1>pygmt.info<a class="headerlink" href="#pygmt-info" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="pygmt.info">
@@ -286,8 +260,8 @@ directly as the <code class="docutils literal notranslate"><span class="pre">reg
 and <em>dy</em> are needed). If the <code class="docutils literal notranslate"><span class="pre">per_column</span></code> parameter is combined with
 <code class="docutils literal notranslate"><span class="pre">spacing</span></code>, then the numpy.ndarray output will be rounded up/down for as
 many columns as there are increments provided in <code class="docutils literal notranslate"><span class="pre">spacing</span></code>. A similar
-parameter <code class="docutils literal notranslate"><span class="pre">nearest_multiple</span></code> option will provide a numpy.ndarray in the
-form of [<em>zmin</em>, <em>zmax</em>, <em>dz</em>]`` for makecpt.</p>
+parameter <code class="docutils literal notranslate"><span class="pre">nearest_multiple</span></code> will provide a numpy.ndarray in the form
+of [<em>zmin</em>, <em>zmax</em>, <em>dz</em>] for makecpt.</p>
 <p>Full option list at <a class="reference external" href="https://docs.generic-mapping-tools.org/latest/gmtinfo.html">https://docs.generic-mapping-tools.org/latest/gmtinfo.html</a></p>
 <p><strong>Aliases:</strong></p>
 <ul class="simple">
@@ -295,11 +269,12 @@ form of [<em>zmin</em>, <em>zmax</em>, <em>dz</em>]`` for makecpt.</p>
 <li><p>I = spacing</p></li>
 <li><p>T = nearest_multiple</p></li>
 <li><p>V = verbose</p></li>
+<li><p>f = coltypes</p></li>
 </ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>table</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><em>np.ndarray</em><em> or </em><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.2)"><em>pandas.DataFrame</em></a><em> or </em><a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.16.3.dev0)"><em>xarray.Dataset</em></a>) – Pass in either a file name to an ASCII data table, a 1D/2D numpy array,
+<li><p><strong>table</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><em>np.ndarray</em><em> or </em><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.3)"><em>pandas.DataFrame</em></a><em> or </em><a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.17.1.dev0)"><em>xarray.Dataset</em></a>) – Pass in either a file name to an ASCII data table, a 1D/2D numpy array,
 a pandas dataframe, or an xarray dataset made up of 1D xarray.DataArray
 data variables.</p></li>
 <li><p><strong>per_column</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Report the min/max values per column in separate columns.</p></li>
@@ -322,13 +297,17 @@ written to stderr. Choose among 7 levels of verbosity:</p>
 <li><p><strong>d</strong> - Debugging messages</p></li>
 </ul>
 </p></li>
+<li><p><strong>coltypes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – [<strong>i</strong>|<strong>o</strong>]<em>colinfo</em>.
+Specify data types of input and/or output columns (time or
+geographical data). Full documentation is at
+<a class="reference external" href="https://docs.generic-mapping-tools.org/latest/gmt.html#f-full">https://docs.generic-mapping-tools.org/latest/gmt.html#f-full</a>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><p><strong>output</strong> (<em>np.ndarray or str</em>) – Return type depends on whether any of the <code class="docutils literal notranslate"><span class="pre">per_column</span></code>,
 <code class="docutils literal notranslate"><span class="pre">spacing</span></code>, or <code class="docutils literal notranslate"><span class="pre">nearest_multiple</span></code> parameters are set.</p>
 <ul class="simple">
-<li><p>np.ndarray if either of the above parameters are used.</p></li>
+<li><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.20)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> if either of the above parameters are used.</p></li>
 <li><p>str if none of the above parameters are used.</p></li>
 </ul>
 </p>
@@ -369,7 +348,7 @@ written to stderr. Choose among 7 levels of verbosity:</p>
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/aeb4d4a">aeb4d4a</a></code>.
         </span>
       
 

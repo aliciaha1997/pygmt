@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -230,7 +229,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -241,31 +239,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="sphx-glr-download-link-note admonition note">
+  <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-gallery-grid-track-sampling-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
@@ -274,13 +248,13 @@ to download the full example code</p>
 <span id="sphx-glr-gallery-grid-track-sampling-py"></span><h1>Sampling along tracks<a class="headerlink" href="#sampling-along-tracks" title="Permalink to this headline">¶</a></h1>
 <p>The <a class="reference internal" href="../../api/generated/pygmt.grdtrack.html#pygmt.grdtrack" title="pygmt.grdtrack"><code class="xref py py-func docutils literal notranslate"><span class="pre">pygmt.grdtrack</span></code></a> function samples a raster grid’s value along specified
 points. We will need to input a 2D raster to <code class="docutils literal notranslate"><span class="pre">grid</span></code> which can be an
-<a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.16.3.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a>. The <code class="docutils literal notranslate"><span class="pre">points</span></code> argument can be a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> table where
-the first two columns are x and y (or longitude and latitude). Note also that there is a
-<code class="docutils literal notranslate"><span class="pre">newcolname</span></code> argument that will be used to name the new column of values we sampled
-from the grid.</p>
-<p>Alternatively, we can provide a NetCDF file path to <code class="docutils literal notranslate"><span class="pre">grid</span></code>. An ASCII file path can
-also be accepted for <code class="docutils literal notranslate"><span class="pre">points</span></code>, but an <code class="docutils literal notranslate"><span class="pre">outfile</span></code> argument will then need to be set
-to name the resulting output ASCII file.</p>
+<a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.17.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a>. The argument passed to the <code class="docutils literal notranslate"><span class="pre">points</span></code> parameter can be a
+<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> table where the first two columns are x and y (or longitude
+and latitude). Note also that there is a <code class="docutils literal notranslate"><span class="pre">newcolname</span></code> parameter that will be used to
+name the new column of values sampled from the grid.</p>
+<p>Alternatively, a NetCDF file path can be passed to <code class="docutils literal notranslate"><span class="pre">grid</span></code>. An ASCII file path can
+also be accepted for <code class="docutils literal notranslate"><span class="pre">points</span></code>. To save an output ASCII file, a file name argument
+needs to be passed to the <code class="docutils literal notranslate"><span class="pre">outfile</span></code> parameter.</p>
 <img alt="track sampling" class="sphx-glr-single-img" src="../../_images/sphx_glr_track_sampling_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
@@ -314,7 +288,7 @@ to name the resulting output ASCII file.</p>
 <a href="../../api/generated/pygmt.Figure.show.html#pygmt.Figure.show" title="pygmt.Figure.show" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.137 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.552 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-grid-track-sampling-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f2c32e0b13ff30e178033f046ffd28ed/track_sampling.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">track_sampling.py</span></code></a></p>
@@ -350,7 +324,7 @@ to name the resulting output ASCII file.</p>
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/aeb4d4a">aeb4d4a</a></code>.
         </span>
       
 

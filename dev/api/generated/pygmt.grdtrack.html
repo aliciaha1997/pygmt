@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -239,7 +238,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -250,31 +248,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="pygmt-grdtrack">
+  <div class="section" id="pygmt-grdtrack">
 <h1>pygmt.grdtrack<a class="headerlink" href="#pygmt-grdtrack" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="pygmt.grdtrack">
@@ -286,27 +260,28 @@ interpolates the grid(s) at the positions in the table and writes out the
 table with the interpolated values added as (one or more) new columns. A
 bicubic [Default], bilinear, B-spline or nearest-neighbor interpolation is
 used, requiring boundary conditions at the limits of the region (see
-<em>interpolation</em>; Default uses “natural” conditions (second partial
+<code class="docutils literal notranslate"><span class="pre">interpolation</span></code>; Default uses “natural” conditions (second partial
 derivative normal to edge is zero) unless the grid is automatically
 recognized as periodic.)</p>
 <p>Full option list at <a class="reference external" href="https://docs.generic-mapping-tools.org/latest/grdtrack.html">https://docs.generic-mapping-tools.org/latest/grdtrack.html</a></p>
 <p><strong>Aliases:</strong></p>
 <ul class="simple">
 <li><p>V = verbose</p></li>
+<li><p>f = coltypes</p></li>
 <li><p>n = interpolation</p></li>
 </ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>points</strong> (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.2)"><em>pandas.DataFrame</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Either a table with (x, y) or (lon, lat) values in the first two
+<li><p><strong>points</strong> (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.3)"><em>pandas.DataFrame</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Either a table with (x, y) or (lon, lat) values in the first two
 columns, or a filename (e.g. csv, txt format). More columns may be
 present.</p></li>
-<li><p><strong>grid</strong> (<a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.16.3.dev0)"><em>xarray.DataArray</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Gridded array from which to sample values from, or a filename (netcdf
+<li><p><strong>grid</strong> (<a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.17.1.dev0)"><em>xarray.DataArray</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Gridded array from which to sample values from, or a filename (netcdf
 format).</p></li>
-<li><p><strong>newcolname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Required if ‘points’ is a pandas.DataFrame. The name for the new column
-in the track pandas.DataFrame table where the sampled values will be
-placed.</p></li>
-<li><p><strong>outfile</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Required if ‘points’ is a file. The file name for the output ASCII
+<li><p><strong>newcolname</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Required if <code class="docutils literal notranslate"><span class="pre">points</span></code> is a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>. The name for the
+new column in the track <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> table where the
+sampled values will be placed.</p></li>
+<li><p><strong>outfile</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Required if <code class="docutils literal notranslate"><span class="pre">points</span></code> is a file. The file name for the output ASCII
 file.</p></li>
 <li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – <p>Select verbosity level [Default is <strong>w</strong>], which modulates the messages
 written to stderr. Choose among 7 levels of verbosity:</p>
@@ -320,6 +295,10 @@ written to stderr. Choose among 7 levels of verbosity:</p>
 <li><p><strong>d</strong> - Debugging messages</p></li>
 </ul>
 </p></li>
+<li><p><strong>coltypes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – [<strong>i</strong>|<strong>o</strong>]<em>colinfo</em>.
+Specify data types of input and/or output columns (time or
+geographical data). Full documentation is at
+<a class="reference external" href="https://docs.generic-mapping-tools.org/latest/gmt.html#f-full">https://docs.generic-mapping-tools.org/latest/gmt.html#f-full</a>.</p></li>
 <li><p><strong>interpolation</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – <p>[<strong>b</strong>|<strong>c</strong>|<strong>l</strong>|<strong>n</strong>][<strong>+a</strong>][<strong>+b</strong><em>BC</em>][<strong>+c</strong>][<strong>+t</strong><em>threshold</em>].
 Select interpolation mode for grids. You can select the type of
 spline used:</p>
@@ -333,11 +312,12 @@ spline used:</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><p><strong>track</strong> (<em>pandas.DataFrame or None</em>) – Return type depends on whether the outfile parameter is set:</p>
+<dd class="field-even"><p><p><strong>track</strong> (<em>pandas.DataFrame or None</em>) – Return type depends on whether the <code class="docutils literal notranslate"><span class="pre">outfile</span></code> parameter is set:</p>
 <ul class="simple">
-<li><p>pandas.DataFrame table with (x, y, …, newcolname) if outfile is not
-set</p></li>
-<li><p>None if outfile is set (track output will be stored in outfile)</p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.2.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> table with (x, y, …, newcolname) if
+<code class="docutils literal notranslate"><span class="pre">outfile</span></code> is not set</p></li>
+<li><p>None if <code class="docutils literal notranslate"><span class="pre">outfile</span></code> is set (track output will be stored in file set
+by <code class="docutils literal notranslate"><span class="pre">outfile</span></code>)</p></li>
 </ul>
 </p>
 </dd>
@@ -377,7 +357,7 @@ set</p></li>
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/aeb4d4a">aeb4d4a</a></code>.
         </span>
       
 

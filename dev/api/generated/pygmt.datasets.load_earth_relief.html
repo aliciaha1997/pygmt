@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -237,7 +236,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -248,31 +246,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="pygmt-datasets-load-earth-relief">
+  <div class="section" id="pygmt-datasets-load-earth-relief">
 <h1>pygmt.datasets.load_earth_relief<a class="headerlink" href="#pygmt-datasets-load-earth-relief" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="pygmt.datasets.load_earth_relief">
@@ -285,9 +259,10 @@ So you’ll need an internet connection the first time around.</p>
 <p>These grids can also be accessed by passing in the file name
 <strong>&#64;earth_relief</strong>_<em>res</em>[_<em>reg</em>] to any grid plotting/processing
 function. <em>res</em> is the grid resolution (see below), and <em>reg</em> is grid
-registration type (<strong>p</strong> for pixel registration or <em>g</em> for gridline
-registration). Refer to <a class="reference external" href="https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html">https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html</a> for more
-details.</p>
+registration type (<strong>p</strong> for pixel registration or <strong>g</strong> for gridline
+registration).</p>
+<p>Refer to <a class="reference external" href="https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html#global-earth-relief-grids">https://docs.generic-mapping-tools.org/latest/datasets/remote-data.html#global-earth-relief-grids</a>
+for more details.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -296,8 +271,10 @@ arc-degree, arc-minute and arc-second. It can be <code class="docutils literal n
 <code class="docutils literal notranslate"><span class="pre">'20m'</span></code>, <code class="docutils literal notranslate"><span class="pre">'15m'</span></code>, <code class="docutils literal notranslate"><span class="pre">'10m'</span></code>, <code class="docutils literal notranslate"><span class="pre">'06m'</span></code>, <code class="docutils literal notranslate"><span class="pre">'05m'</span></code>, <code class="docutils literal notranslate"><span class="pre">'04m'</span></code>,
 <code class="docutils literal notranslate"><span class="pre">'03m'</span></code>, <code class="docutils literal notranslate"><span class="pre">'02m'</span></code>, <code class="docutils literal notranslate"><span class="pre">'01m'</span></code>, <code class="docutils literal notranslate"><span class="pre">'30s'</span></code>, <code class="docutils literal notranslate"><span class="pre">'15s'</span></code>, <code class="docutils literal notranslate"><span class="pre">'03s'</span></code>,
 or <code class="docutils literal notranslate"><span class="pre">'01s'</span></code>.</p></li>
-<li><p><strong>region</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a>) – The subregion of the grid to load. Required for Earth relief grids with
-resolutions higher than 5 arc-minute (i.e., <code class="docutils literal notranslate"><span class="pre">05m</span></code>).</p></li>
+<li><p><strong>region</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a>) – The subregion of the grid to load, in the forms of a list
+[<em>xmin</em>, <em>xmax</em>, <em>ymin</em>, <em>ymax</em>] or a string <em>xmin/xmax/ymin/ymax</em>.
+Required for Earth relief grids with resolutions higher than 5
+arc-minute (i.e., <code class="docutils literal notranslate"><span class="pre">05m</span></code>).</p></li>
 <li><p><strong>registration</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – Grid registration type. Either <code class="docutils literal notranslate"><span class="pre">pixel</span></code> for pixel registration or
 <code class="docutils literal notranslate"><span class="pre">gridline</span></code> for gridline registration. Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, where
 a pixel-registered grid is returned unless only the
@@ -305,12 +282,12 @@ gridline-registered grid is available.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>grid</strong> (<a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.16.3.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a>) – The Earth relief grid. Coordinates are latitude and longitude in
+<dd class="field-even"><p><strong>grid</strong> (<a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.17.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a>) – The Earth relief grid. Coordinates are latitude and longitude in
 degrees. Relief is in meters.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>The <a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.16.3.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a> grid doesn’t support slice operation, for
+<p>The <a class="reference external" href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.17.1.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.DataArray</span></code></a> grid doesn’t support slice operation, for
 Earth relief data with resolutions higher than “05m”, which are stored as
 smaller tiles.</p>
 <p class="rubric">Examples</p>
@@ -371,7 +348,7 @@ smaller tiles.</p>
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/aeb4d4a">aeb4d4a</a></code>.
         </span>
       
 

@@ -137,7 +137,7 @@ Tutorials
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Setting the style of the map frames, ticks, etc, is handled by the frame argument that all plot...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Setting the style of the map frames, ticks, etc, is handled by the frame parameter that all plo...">
 
 .. only:: html
 
@@ -221,7 +221,7 @@ Tutorials
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Many of the plotting functions take the region argument, which sets the area that will be shown...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Many of the plotting functions take the region parameter, which sets the area that will be show...">
 
 .. only:: html
 

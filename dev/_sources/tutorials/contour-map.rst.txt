@@ -27,7 +27,7 @@ Plotting a contour map is handled by :meth:`pygmt.Figure.grdcontour`.
 
     This tutorial assumes the use of a Python notebook, such as IPython or Jupyter Notebook.
     To see the figures while using a Python script instead, use
-    ``fig.show(method="external)`` to display the figure in the default PDF viewer.
+    ``fig.show(method="external")`` to display the figure in the default PDF viewer.
 
     To save the figure, use ``fig.savefig("figname.pdf")`` where ``"figname.pdf"``
     is the desired name and file extension for the saved figure.
@@ -268,7 +268,7 @@ method, it does not need to be repeated in the :meth:`pygmt.Figure.grdcontour` m
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.711 seconds)
+   **Total running time of the script:** ( 0 minutes  7.926 seconds)
 
 
 .. _sphx_glr_download_tutorials_contour-map.py:

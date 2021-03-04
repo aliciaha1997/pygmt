@@ -31,7 +31,6 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -240,7 +239,6 @@
                    class="fa fa-github"> Improve this page</a>
             
         
-        
     </li>
 
   </ul>
@@ -251,31 +249,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="sphx-glr-download-link-note admonition note">
+  <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-gallery-plot-colorbar-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
@@ -283,8 +257,8 @@ to download the full example code</p>
 <div class="sphx-glr-example-title section" id="colorbar">
 <span id="sphx-glr-gallery-plot-colorbar-py"></span><h1>Colorbar<a class="headerlink" href="#colorbar" title="Permalink to this headline">¶</a></h1>
 <p>The <a class="reference internal" href="../../api/generated/pygmt.Figure.colorbar.html#pygmt.Figure.colorbar" title="pygmt.Figure.colorbar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.Figure.colorbar</span></code></a> method creates a color scalebar. We must
-specify the colormap via the <code class="docutils literal notranslate"><span class="pre">cmap</span></code> argument, and optionally set the
-placement via the <code class="docutils literal notranslate"><span class="pre">position</span></code> argument. The full list of color palette tables
+specify the colormap via the <code class="docutils literal notranslate"><span class="pre">cmap</span></code> parameter, and optionally set the
+placement via the <code class="docutils literal notranslate"><span class="pre">position</span></code> parameter. The full list of color palette tables
 can be found at <a class="reference external" href="https://docs.generic-mapping-tools.org/latest/cookbook/cpts.html">https://docs.generic-mapping-tools.org/latest/cookbook/cpts.html</a>. You can set the <code class="docutils literal notranslate"><span class="pre">position</span></code> of
 the colorbar using the following options:</p>
 <ul class="simple">
@@ -298,7 +272,7 @@ latitude 45S.</p></li>
 point.</p></li>
 <li><p><strong>n</strong>: using normalized (0-1) coordinates, e.g. <code class="docutils literal notranslate"><span class="pre">position=&quot;n0.4/0.8&quot;</span></code>.</p></li>
 </ul>
-<p>Note that the anchor point defaults to the bottom left (BL). Append <code class="docutils literal notranslate"><span class="pre">+h</span></code> to
+<p>Note that the anchor point defaults to the bottom left (<strong>BL</strong>). Append <code class="docutils literal notranslate"><span class="pre">+h</span></code> to
 <code class="docutils literal notranslate"><span class="pre">position</span></code> to get a horizontal colorbar instead of a vertical one.</p>
 <img alt="colorbar" class="sphx-glr-single-img" src="../../_images/sphx_glr_colorbar_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
@@ -336,7 +310,8 @@ point.</p></li>
     <span class="c1"># with a length/width (+w) of 7cm by 0.5cm and a box for NaN values (+n)</span>
     <span class="n">position</span><span class="o">=</span><span class="s2">&quot;JMR+o1c/0c+w7c/0.5c+n+mc&quot;</span><span class="p">,</span>
     <span class="c1"># Note that the label &#39;Elevation&#39; is moved to the opposite side and plotted</span>
-    <span class="c1"># vertically as a column of text using &#39;+mc&#39; in the position argument above</span>
+    <span class="c1"># vertically as a column of text using &#39;+mc&#39; in the position parameter</span>
+    <span class="c1"># above</span>
     <span class="n">frame</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x+lElevation&quot;</span><span class="p">,</span> <span class="s2">&quot;y+lm&quot;</span><span class="p">],</span>
     <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
 <span class="p">)</span>
@@ -344,7 +319,7 @@ point.</p></li>
 <a href="../../api/generated/pygmt.Figure.show.html#pygmt.Figure.show" title="pygmt.Figure.show" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.321 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.551 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-plot-colorbar-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/40f3e3bf98b6b80f41c2904a9a4bf7a2/colorbar.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">colorbar.py</span></code></a></p>
@@ -380,7 +355,7 @@ point.</p></li>
         &copy; Copyright 2017-2021, The PyGMT Developers.
       
         <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/65b099a">65b099a</a></code>.
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/aeb4d4a">aeb4d4a</a></code>.
         </span>
       
 
